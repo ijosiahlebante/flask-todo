@@ -1,45 +1,67 @@
-Simple Flask Todo App using SQLAlchemy and SQLite database.
+# Flask Todo App - REST API Enhancement
 
-For styling [semantic-ui](https://semantic-ui.com/) is used.
+## Original Application
 
-### Setup
-Create project with virtual environment
+This project is a simple Flask Todo application using SQLite and SQLAlchemy.
 
-```console
-$ mkdir myproject
-$ cd myproject
-$ python3 -m venv venv
-```
+## Added Feature
 
-Activate it
-```console
-$ . venv/bin/activate
-```
+I added a Categories REST API feature with full CRUD functionality.
 
-or on Windows
-```console
-venv\Scripts\activate
-```
+## API Endpoints
 
-Install Flask
-```console
-$ pip install Flask
-$ pip install Flask-SQLAlchemy
-```
+### Get All Categories
 
-Set environment variables in terminal
-```console
-$ export FLASK_APP=app.py
-$ export FLASK_ENV=development
-```
+GET /api/categories
 
-or on Windows
-```console
-$ set FLASK_APP=app.py
-$ set FLASK_ENV=development
-```
+### Get Single Category
 
-Run the app
-```console
-$ flask run
-```
+GET /api/categories/<id>
+
+### Create Category
+
+POST /api/categories
+
+### Update Category
+
+PUT /api/categories/<id>
+
+### Delete Category
+
+DELETE /api/categories/<id>
+
+## Technologies Used
+
+* Flask
+* Flask-SQLAlchemy
+* SQLite
+* Pytest
+* Postman
+
+## Testing
+
+Unit tests were created using pytest to verify:
+
+* Create Category
+* Read Categories
+* Update Category
+* Delete Category
+* Error handling
+
+## How to Run
+
+Install dependencies:
+
+pip install flask==2.2.5
+pip install flask-sqlalchemy==2.5.1
+pip install sqlalchemy==1.4.46
+pip install werkzeug==2.2.3
+pip install pytest
+
+Run the application:
+
+python app.py
+
+Run tests:
+
+pytest
