@@ -1,14 +1,25 @@
-# Flask Todo App - REST API Enhancement
+# Flask Todo App REST API Enhancement
 
 ## Original Application
 
-This project is a simple Flask Todo application using SQLite and SQLAlchemy.
+This project is based on the Flask Todo App created by Patrick Loeber. The application allows users to create, complete, and delete todo tasks using Flask, SQLite, and SQLAlchemy.
 
-## Added Feature
+## Enhancement Added
 
-I added a Categories REST API feature with full CRUD functionality.
+I added a Categories REST API feature to extend the functionality of the application.
+
+The Categories API supports full CRUD operations:
+
+* Create Category
+* Read Categories
+* Update Category
+* Delete Category
 
 ## API Endpoints
+
+### Create Category
+
+POST /api/categories
 
 ### Get All Categories
 
@@ -18,10 +29,6 @@ GET /api/categories
 
 GET /api/categories/<id>
 
-### Create Category
-
-POST /api/categories
-
 ### Update Category
 
 PUT /api/categories/<id>
@@ -30,38 +37,43 @@ PUT /api/categories/<id>
 
 DELETE /api/categories/<id>
 
+## Features Implemented
+
+* RESTful API design
+* JSON request and response handling
+* Proper HTTP status codes
+* Error handling for invalid or missing resources
+* Automated testing using pytest
+
 ## Technologies Used
 
 * Flask
 * Flask-SQLAlchemy
 * SQLite
-* Pytest
 * Postman
+* Pytest
 
 ## Testing
 
-Unit tests were created using pytest to verify:
+Automated tests were created to verify:
 
-* Create Category
-* Read Categories
-* Update Category
-* Delete Category
-* Error handling
+* Create operations
+* Read operations
+* Update operations
+* Delete operations
+* Error handling and negative test cases
 
 ## How to Run
 
-Install dependencies:
-
-pip install flask==2.2.5
-pip install flask-sqlalchemy==2.5.1
-pip install sqlalchemy==1.4.46
-pip install werkzeug==2.2.3
-pip install pytest
-
-Run the application:
+1. Activate the virtual environment.
+2. Run:
 
 python app.py
 
-Run tests:
+3. Open:
+
+http://127.0.0.1:5000
+
+## Run Tests
 
 pytest
